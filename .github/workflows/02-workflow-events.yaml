@@ -1,0 +1,11 @@
+name: 02 - Workflow Events
+on: push
+jobs:
+    echo:
+        name: echo
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show the trigger
+              run: |
+                echo "running workflow for repo" . github.event.repository.name
+                echo "event triggered - " . github.event.type
